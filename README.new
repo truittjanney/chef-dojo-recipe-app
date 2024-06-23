@@ -1,0 +1,30 @@
+The Project:
+- Chef-Dojo is a full-stack web application that allows users to create and store their favorite recipes, and put them inside of their created categories.
+
+Project Description:
+- Chef-Dojo allows users to create and store recipes once they have created an account by adding an email and password. The web app also allows users to create their own categories and store the recipes within them. The user can create and delete recipes and categories as needed. The user can also use the search bar to look up nutrition facts and information on different ingredients.
+
+Built With:
+- HTML
+- CSS / Bootstrap
+- JavaScript
+- React
+- Python
+- Flask
+- SQLAlchemy
+
+Installation Guide:
+- To run the backend, type the command into the terminal: 'pipenv run start'
+- To run the frontend, type the command into the terminal: 'npm run start'
+
+How to use Chef-Dojo:
+- Create an account with login credentials. Add your email and create a password, then you're set.
+
+Contributors:
+- Truitt Janney (https://github.com/truittjanney)
+- Adnel Martin (https://github.com/Adnel1)
+- Frank Trujillo (https://github.com/Frankielee2272)
+- Samantha McCabe (https://github.com/SamanthaMcCabe2104)
+- Elvis Hernandez (https://github.com/ElvisHernandez)
+
+How to Contribute:
