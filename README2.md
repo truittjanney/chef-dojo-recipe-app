@@ -97,15 +97,15 @@ We welcome contributions from the community! How to contribute:
 Making Changes:
 - 1) Fork the repository - Start by forking the repository to your GitHub account.
 - 2) Clone the repository - Clone your forked repository to your local machine using 'git clone https://github.com/your-username/your-repo-name.git
-- 3-1) Create a new branch - Create a new branch for your changes. Use a descriptive name for your branch to identify the feature or fix you are working on.
-- 3-2) Use the command 'git checkout -b your-branch-name'
-- 4) Make your changes - Make your changes to the codebase. Ensure your code follows the project's coding standards and passes all tests.
+- 3) Create a new branch - Create a new branch for your changes. Use a descriptive name for your branch to identify the feature or fix you are working on.
+- 4) Use the command 'git checkout -b your-branch-name'
+- 5) Make your changes - Make your changes to the codebase. Ensure your code follows the project's coding standards and passes all tests.
 
 Committing & Pushing Changes:
-- 1-1) Commit your changes - Once you have made and tested your changes, commit them with a clear and concise commit message. Then push your changes to your forked repository.
-- 1-2) Use the command 'git add .'
-- 1-3) Use the command 'git commit -m "Description of the changes"'
-- 1-4) Use the command 'git push origin your-branch-name'
+- 1) Commit your changes - Once you have made and tested your changes, commit them with a clear and concise commit message. Then push your changes to your forked repository.
+- 2) Use the command 'git add .'
+- 3) Use the command 'git commit -m "Description of the changes"'
+- 4) Use the command 'git push origin your-branch-name'
 
 Creating a Pull Request:
 - 1) Navigate to the original repository - Go to the original repository where you want to submit your changes.
