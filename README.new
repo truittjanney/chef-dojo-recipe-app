@@ -1,45 +1,107 @@
-<h1>Introduction:</h1>
+Introduction:
 - Chef-Dojo is a full-stack web application that allows users to create and store their favorite recipes, and put them inside of their created categories.
 
-<h1>Project Description:</h1>
+Project Description:
 - Chef-Dojo allows users to create and store recipes once they have created an account by adding an email and password. The web app also allows users to create their own categories and store the recipes within them. The user can create and delete recipes and categories as needed. The user can also use the search bar to look up nutrition facts and information on different ingredients.
 
-<h1>Built With:</h1>
+Features:
+- Create user categories
+- Delete user categories
+- Alphabetize category and recipe names
+- Search ingredients via search tab to get nutritional data on ingredients
+- Create user recipes
+- Delete user recipes
+- Forgot password reset via email
+
+Technologies Used - Frontend:
 - HTML
 - CSS / Bootstrap
 - JavaScript
 - React
+
+Technologies Used - Backend:
 - Python
 - Flask
 - SQLAlchemy
 
-<h1>Installation Guide:</h1>
-- To run the backend, type the command into the terminal: 'pipenv run start'.
-- To run the frontend, type the command into the terminal: 'npm run start'.
-- If you are working locally, make sure to install Python 3.10 and node.
+Installation Guide:
+- If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10 and Node.
+- It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recommended)
 
-<h1>How to use Chef-Dojo:</h1>
+- 1) Install the python packages: `$ pipenv install`
+- 2) Create a .env file based on the .env.example: `$ cp .env.example .env`
+- 3) Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the values with your database information:
+
+| Engine    | DATABASE_URL                                        |
+| --------- | --------------------------------------------------- |
+| SQLite    | sqlite:////test.db                                  |
+| MySQL     | mysql://username:password@localhost:port/example    |
+| Postgress | postgres://username:password@localhost:5432/example |
+
+- 4) Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
+- 5) Run the migrations: `$ pipenv run upgrade`
+- 6) Run the application: `$ pipenv run start`
+
+- Note: Codespace users can connect to psql by typing: `psql -h localhost -U gitpod example`
+
+Undo a Migration:
+- You are also able to undo a migration by running
+
+```sh
+$ pipenv run downgrade
+```
+
+Backend Populate Table Users:
+- To insert test users in the database execute the following command:
+
+```sh
+$ flask insert-test-users 5
+```
+
+And you will see the following message:
+
+```
+  Creating test users
+  test_user1@test.com created.
+  test_user2@test.com created.
+  test_user3@test.com created.
+  test_user4@test.com created.
+  test_user5@test.com created.
+  Users created successfully!
+```
+
+***Important note for the database and the data inside it***
+
+Every Github codespace environment will have **its own database**, so if you're working with more people everyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
+
+Front-End Manual Installation:
+-   Make sure you are using node version 14+ and that you have already successfully installed and ran the backend.
+
+- 1) Install the packages: `$ npm install`
+- 2) Start coding! Start the webpack dev server `$ npm run start`
+
+How to use Chef-Dojo:
 - Create an account with login credentials. Add your email and create a password, then you're set.
 
-<h1>Contributors:</h1>
+Contributors:
 - Truitt Janney (https://github.com/truittjanney)
 - Adnel Martin (https://github.com/Adnel1)
 - Frank Trujillo (https://github.com/Frankielee2272)
 - Samantha McCabe (https://github.com/SamanthaMcCabe2104)
 - Elvis Hernandez (https://github.com/ElvisHernandez)
 
-<h1>We welcome contributions from the community! How to contribute:</h1>
+We welcome contributions from the community! How to contribute:
 - Search existing issues before creating a new issue. Please check to see if it has already been reported. This helps us avoid duplicates.
 - If you cannot find an existing issue, you can create a new one. Please provide detailed information about the problem, including steps to reproduce, expected behavior, and any relevant screenshots.
 
-<h3>Making Changes:</h3>
+Making Changes:
 - 1) Fork the repository - Start by forking the repository to your GitHub account.
 - 2) Clone the repository - Clone your forked repository to your local machine using 'git clone https://github.com/your-username/your-repo-name.git
 - 3-1) Create a new branch - Create a new branch for your changes. Use a descriptive name for your branch to identify the feature or fix you are working on.
 - 3-2) Use the command 'git checkout -b your-branch-name'
 - 4) Make your changes - Make your changes to the codebase. Ensure your code follows the project's coding standards and passes all tests.
 
-<h3>Committing & Pushing Changes:</h3>
+Committing & Pushing Changes:
 - 1-1) Commit your changes - Once you have made and tested your changes, commit them with a clear and concise commit message. Then push your changes to your forked repository.
 - 1-2) Use the command 'git add .'
 - 1-3) Use the command 'git commit -m "Description of the changes"'
